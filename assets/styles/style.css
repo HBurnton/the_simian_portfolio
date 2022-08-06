@@ -20,11 +20,22 @@ body{
     background-color: var(--mid-dark);
 }
 
-hr{
-    border-top: 5px solid var(--dark);
-    border-radius: 2px;
-    margin: 0;
+h1, h2, h3, a{
+    font-family: 'Mouse Memoirs', sans-serif;
+}
 
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+    border: 0;
+    padding: 20px;
+}
+
+h3{
+    font-size: 1.3rem;
 }
 
 ul{
@@ -38,16 +49,19 @@ header{
     align-items: baseline;
     width: 100%;
     background-color: var(--mid-dark);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 a{
     text-decoration: none;
     color: var(--light);
-    font-size: 1.5rem;
+    transition: ease-in-out .2s;
 }
 
 a:hover{
     text-decoration: underline;
+    text-shadow: 3px 3px 0px var(--mid);
 }
 
 a:active{
@@ -55,7 +69,8 @@ a:active{
 }
 
 nav{
-    width: 25%;
+    width: 30%;
+    font-size: 1.75rem;
 }
 
 header li{
@@ -64,26 +79,16 @@ header li{
     margin: 2%;
 }
 
-h1, h2, h3, a{
-    font-family: 'Mouse Memoirs', sans-serif;
-}
-
-h1{
-    font-size: 3rem;
-    margin-left: 1rem;
-}
-
-h2{
-    font-size: 2rem;
-}
-
 #about{
     display: flex;
-    align-items: center;
+    background-color: var(--mid);
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 #about img{
-    max-width: 300px;
+    width: 33%;
+    object-fit: cover;
     margin: 2%;
 }
 
@@ -93,13 +98,78 @@ h2{
     justify-content: space-around;
 }
 
+#projects{
+    display: flex;
+    flex-direction: column;
+}
+
+#project_one{
+    background-color: #f2e9e4;
+    border: 5px solid var(--dark);
+    border-radius: 10px;
+}
+#project_one img{
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+#project_one h3{
+    border: 0;
+}
+
 .project{
     display: flex;
-    border: 1px solid black;
     margin:1%;
-    height: 400px;
+    object-fit: cover;
+}
+
+.project img{
+    border-radius: 10px 0px 0px 10px;
+    width: 30%;
+    object-fit: cover;
+    border-right: 10px solid var(--mid-dark);
 }
 
 .project_info{
     background-color: var(--dark);
+    overflow: hidden;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.project_info p{
+    margin: 10px;
+}
+
+.project h3{
+    padding: 20px;
+    border-bottom: ;
+}
+
+
+hr{
+    border-top: 5px solid var(--dark);
+    border-radius: 2px;
+    margin: 0;
+}
+
+#contact{
+    padding: 1rem 0;
+}
+
+#contact h2{
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: var(--dark);
+    padding: 10px 0;
+}
+
+#contact ul{
+    justify-content: space-around;
+}
+
+footer{
+    background-color: #22223b;
+    padding: 10px;
+    text-align: center;
 }
