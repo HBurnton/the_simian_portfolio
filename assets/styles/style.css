@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+:root{
+    box-sizing: border-box;
+    --dark: #22223b;
+    --light: #f2e9e4;
+    --mid: #9a8c98;
+    --mid-dark: #4a4e69;
+    --mid-light: #c9ada7;
+    font-size: 16px;
+    letter-spacing: 2px;
+    background-color: var(--dark);
+}
+
+body{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2%;
+    color: var(--light);
+    background-color: var(--mid-dark);
+}
+
+hr{
+    border-top: 5px solid var(--dark);
+    border-radius: 2px;
+    margin: 0;
+
+}
+
+ul{
+    display:flex;
+    justify-content: space-between;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    background-color: var(--mid-dark);
+}
+
+a{
+    text-decoration: none;
+    color: var(--light);
+    font-size: 1.5rem;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:active{
+    color: var(--mid);
+}
+
+nav{
+    width: 25%;
+}
+
+header li{
+    list-style-type: none;
+    display: inline;
+    margin: 2%;
+}
+
+h1, h2, h3, a{
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+#about{
+    display: flex;
+    align-items: center;
+}
+
+#about img{
+    max-width: 300px;
+    margin: 2%;
+}
+
+#subproject{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project{
+    display: flex;
+    border: 1px solid black;
+    margin:1%;
+    height: 400px;
+}
+
+.project_info{
+    background-color: var(--dark);
+}
