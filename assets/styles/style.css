@@ -7,6 +7,7 @@
     --mid: #9a8c98;
     --mid-dark: #4a4e69;
     --mid-light: #c9ada7;
+    --accent: #af4d8c;
     font-size: 16px;
     letter-spacing: 2px;
     background-color: var(--dark);
@@ -25,7 +26,7 @@ h1, h2, h3, a{
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 6rem;
 }
 
 h2{
@@ -39,18 +40,18 @@ h3{
 }
 
 ul{
-    display:flex;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
 }
 
 header{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     background-color: var(--mid-dark);
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
 }
 
 a{
@@ -69,7 +70,7 @@ a:active{
 }
 
 nav{
-    width: 30%;
+    width: 100%;
     font-size: 1.75rem;
 }
 
@@ -104,7 +105,6 @@ header li{
 }
 
 #project_one{
-    background-color: #f2e9e4;
     border: 5px solid var(--dark);
     border-radius: 10px;
 }
@@ -120,21 +120,21 @@ header li{
 
 .project{
     display: flex;
-    margin:1%;
     object-fit: cover;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
 }
 
 .project img{
-    border-radius: 10px 0px 0px 10px;
-    width: 30%;
+    border-radius: 10px 10px 0px 0px;
     object-fit: cover;
-    border-right: 10px solid var(--mid-dark);
 }
 
 .project_info{
     background-color: var(--dark);
     overflow: hidden;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .project_info p{
@@ -143,12 +143,12 @@ header li{
 
 .project h3{
     padding: 20px;
-    border-bottom: ;
+    border-bottom: 5px solid var(--mid);
 }
 
 
 hr{
-    border-top: 5px solid var(--dark);
+    border-top: 5px solid var(--accent);
     border-radius: 2px;
     margin: 0;
 }
@@ -166,6 +166,10 @@ hr{
 
 #contact ul{
     justify-content: space-around;
+}
+
+#contact a{
+    font-size: 1.5rem;
 }
 
 footer{
