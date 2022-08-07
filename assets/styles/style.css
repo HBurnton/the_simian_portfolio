@@ -137,10 +137,17 @@ header li{
     border-radius: 0px 0px 10px 10px;
 }
 
-.project_info p{
+.project_info{
     margin: 10px;
+    display: none;
 }
 
+/*.project:hover .project_info{
+    display: flex;
+    flex-direction: column;
+
+}
+*/
 .project h3{
     padding: 20px;
     border-bottom: 5px solid var(--mid);
@@ -178,6 +185,38 @@ footer{
     text-align: center;
 }
 
+#contact_form{
+    display: flex;
+}
+
+#contact_form img{
+    width: 50%;
+}
+
+#contact_form form{
+    width: 50%;
+    padding: 20px;
+}
+
+#contact_form ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+textarea{
+    display: block;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
 @media only screen and (max-width: 550px) {
     .project{
      width: 100%;
@@ -194,5 +233,11 @@ footer{
      h1{
          text-align:center
      }
+
+     #contact_form{
+        flex-direction: column;
+        align-items: center;
+
+    }
      
  }
