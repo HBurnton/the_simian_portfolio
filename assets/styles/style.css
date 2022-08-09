@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Mouse+Memoirs&display=swap');
 :root{
     box-sizing: border-box;
     --dark: #22223b;
@@ -19,6 +19,7 @@ body{
     padding: 2%;
     color: var(--light);
     background-color: var(--mid-dark);
+    font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3, a{
@@ -110,7 +111,7 @@ header li{
 }
 #project_one img{
     width: 100%;
-    max-height: 500px;
+    max-height: 350px;
     object-fit: cover;
 }
 
@@ -134,12 +135,11 @@ header li{
 .project_info{
     background-color: var(--dark);
     overflow: hidden;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px;
 }
 
 .project_info{
     margin: 10px;
-    display: none;
 }
 
 /*.project:hover .project_info{
@@ -148,10 +148,6 @@ header li{
 
 }
 */
-.project h3{
-    padding: 20px;
-    border-bottom: 5px solid var(--mid);
-}
 
 
 hr{
@@ -162,21 +158,30 @@ hr{
 
 #contact{
     padding: 1rem 0;
+    background-color: var(--mid);
+    margin-top: 20px;
 }
 
 #contact h2{
     text-align: center;
-    margin-bottom: 1rem;
     background-color: var(--dark);
-    padding: 10px 0;
+    margin-top: -20px;
 }
 
 #contact ul{
     justify-content: space-around;
 }
 
+#bar{
+    margin: 20px 0;
+}
+
 #contact a{
     font-size: 1.5rem;
+}
+
+#contact a:hover{
+    text-shadow: 3px 3px 0px var(--dark);
 }
 
 footer{
@@ -185,17 +190,28 @@ footer{
     text-align: center;
 }
 
+input[type="submit"]{
+    background-color: var(--mid-dark);
+    border: 5px solid white;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20%;
+    cursor: pointer;
+}
+
 #contact_form{
     display: flex;
 }
 
 #contact_form img{
     width: 50%;
+    border-radius: 13px;
+    margin: 0 20px;
 }
 
 #contact_form form{
     width: 50%;
-    padding: 20px;
+    padding-right: 20px;
 }
 
 #contact_form ul{
@@ -212,6 +228,46 @@ label{
     display: flex;
     flex-direction: column;
 }
+
+
+/*testing text hover
+SOURCE:
+https://code-boxx.com/text-over-image-hover-html-css/ */
+
+.project{
+    position: relative;
+}
+
+.project_info{
+/* (C1) DIMENSIONS */
+  box-sizing: border-box;
+  height: 90%;
+  width: 91.5%;
+  padding:20px;
+  margin: 20px;
+ 
+  /* (C2) POSITION */
+  position: absolute;
+  top: 0; left: 0;
+  text-align: center;
+ 
+   /* (C3) COLORS */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.project_info{
+    visibility: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project:hover .project_info{
+    visibility: visible;
+    opacity: 1;
+}
+
+
 
 
 
