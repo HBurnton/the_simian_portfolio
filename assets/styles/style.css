@@ -74,7 +74,6 @@ header{
     align-items: center;
     width: 100%;
     background-color: var(--mid-dark);
-    margin-bottom: 1rem;
 }
 
 nav{
@@ -113,21 +112,22 @@ header li{
     box-shadow: 4px 6px 7px black;
 }
 
-/*Styling for Projects */
-
-#subproject{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+#about p{
+    margin: 0 20px;
+    font-size: 1.4rem;
 }
+
+/*Styling for Projects */
 
 #projects{
     display: flex;
     flex-direction: column;
 }
 
+/* Styling for featured project */
+
 #project_one{
-    border: 5px solid var(--dark);
+    border: 15px solid var(--dark);
     border-radius: 10px;
 }
 #project_one img{
@@ -138,7 +138,24 @@ header li{
 }
 
 #project_one h3{
-    border: 0;
+    padding: 10px 10px 20px 10px;
+    font-size: 1.5rem;
+    background-color: var(--dark);
+    margin: -5px;
+}
+
+#project_one p{
+    padding: 10px;
+    background-color: var(--mid);
+    font-size: 1.2rem;
+}
+
+/*Styling for minor projects */
+
+#subproject{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .project{
