@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Mouse+Memoirs&display=swap');
+
+/* General styling */
 :root{
     box-sizing: border-box;
     --dark: #22223b;
@@ -40,20 +42,13 @@ h3{
     font-size: 1.3rem;
 }
 
-ul{
-    display: flex;
-    justify-content: space-around;
+hr{
+    border-top: 5px solid var(--accent);
+    border-radius: 2px;
+    margin: 0;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: var(--mid-dark);
-    margin-bottom: 1rem;
-}
+/* Link formatting */
 
 a{
     text-decoration: none;
@@ -70,10 +65,28 @@ a:active{
     color: var(--mid);
 }
 
+/*Header and Nav Bar Styling */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--mid-dark);
+    margin-bottom: 1rem;
+}
+
 nav{
     width: 100%;
     font-size: 1.75rem;
 }
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
 
 header li{
     list-style-type: none;
@@ -81,18 +94,26 @@ header li{
     margin: 2%;
 }
 
+/*About Section Styling */
+
 #about{
     display: flex;
     background-color: var(--mid);
     border-radius: 20px;
     margin-bottom: 20px;
+    background: rgb(154,140,152);
+    background: linear-gradient(90deg, var(--mid-light) 0%, var(--mid) 50%);
 }
 
 #about img{
-    width: 33%;
+    max-width: 250px;
     object-fit: cover;
-    margin: 2%;
+    margin: 15px;
+    border-radius: 50%;
+    box-shadow: 4px 6px 7px black;
 }
+
+/*Styling for Projects */
 
 #subproject{
     display: flex;
@@ -113,6 +134,7 @@ header li{
     width: 100%;
     max-height: 350px;
     object-fit: cover;
+    object-position: 100% 0%;
 }
 
 #project_one h3{
@@ -123,38 +145,41 @@ header li{
     display: flex;
     object-fit: cover;
     flex-direction: column;
-    width: 50%;
-    padding: 20px;
+    position: relative;
+    width: 48%;
+    margin: 10px 5px;
 }
 
 .project img{
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 10px 10px;
     object-fit: cover;
 }
 
+
+/*Text overlay effect adapted from https://www.w3schools.com/howto/howto_css_image_overlay_title.asp */
+
 .project_info{
-    background-color: var(--dark);
     overflow: hidden;
     border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    background: var(--dark);
+    color: var(--light);
+    width: 100%;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 0px;
 }
 
-.project_info{
-    margin: 10px;
+.project:hover .project_info{
+    opacity: .9;
 }
 
-/*.project:hover .project_info{
-    display: flex;
-    flex-direction: column;
 
-}
-*/
-
-
-hr{
-    border-top: 5px solid var(--accent);
-    border-radius: 2px;
-    margin: 0;
-}
+/*Contact form styling */
 
 #contact{
     padding: 1rem 0;
@@ -184,10 +209,8 @@ hr{
     text-shadow: 3px 3px 0px var(--dark);
 }
 
-footer{
-    background-color: #22223b;
-    padding: 10px;
-    text-align: center;
+input{
+    margin-top: 5px;
 }
 
 input[type="submit"]{
@@ -229,49 +252,15 @@ label{
     flex-direction: column;
 }
 
+/* Sad Lonely Footer Styling */
 
-/*testing text hover
-SOURCE:
-https://code-boxx.com/text-over-image-hover-html-css/ */
-
-.project{
-    position: relative;
+footer{
+    background-color: #22223b;
+    padding: 10px;
+    text-align: center;
 }
 
-.project_info{
-/* (C1) DIMENSIONS */
-  box-sizing: border-box;
-  height: 90%;
-  width: 91.5%;
-  padding:20px;
-  margin: 20px;
- 
-  /* (C2) POSITION */
-  position: absolute;
-  top: 0; left: 0;
-  text-align: center;
- 
-   /* (C3) COLORS */
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-}
-
-.project_info{
-    visibility: none;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.project:hover .project_info{
-    visibility: visible;
-    opacity: 1;
-}
-
-
-
-
-
-
+/* Media Query Zone */
 
 @media only screen and (max-width: 550px) {
     .project{
