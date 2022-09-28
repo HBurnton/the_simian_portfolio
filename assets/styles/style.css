@@ -164,6 +164,7 @@ header li{
     flex-direction: column;
     position: relative;
     width: 48%;
+    max-height: 300px;
     margin: 10px 5px;
 }
 
